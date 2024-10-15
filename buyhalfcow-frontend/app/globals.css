@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-deer: 183 132 86;
+  --color-deep-champagne: 251 223 162;
+  --color-sepia: 120 55 25;
+  --color-bistre: 69 34 22;
+  --color-antique-white: 248 237 214;
+}
+
+@layer base {
+  body {
+    @apply bg-antiqueWhite text-bistre;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold text-bistre;
+  }
+
+  p {
+    @apply text-sepia;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-sepia text-antiqueWhite hover:bg-bistre transition-colors duration-200 px-4 py-2 rounded;
+  }
+
+  .card {
+    @apply bg-deer rounded-lg shadow-md overflow-hidden;
+  }
+
+  .btn-secondary {
+    @apply bg-deer text-bistre hover:bg-sepia hover:text-antiqueWhite transition-colors duration-200 px-4 py-2 rounded;
+  }
+}
